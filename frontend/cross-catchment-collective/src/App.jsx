@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename="/cross-catchment-collective">
+      <BrowserRouter basename="/">
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
