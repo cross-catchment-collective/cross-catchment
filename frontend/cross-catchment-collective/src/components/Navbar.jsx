@@ -23,7 +23,7 @@ function Navbar() {
   ];
 
   return (
-    <nav className="relative w-full bg-white shadow-sm">
+    <nav className="relative sticky w-full bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
