@@ -49,7 +49,7 @@ const sendEmail = (e) => {
 
             {/* <div className="w-24 h-1 bg-[#22613C] mt-6 rounded-full"></div> */}
 
-            <p className="mt-10 text-base leading-tight text-gray-700">
+            <p className="mt-4 text-base leading-tight text-gray-700">
               Have a question, interested in partnering with us, or want to learn more about our work and partnerships? 
               We'd love to connect with you. Reach out using the contact details below, and we'll be happy to assist.
             </p>
@@ -77,7 +77,7 @@ const sendEmail = (e) => {
 
                   <a
                     href="mailto:catchmentcollaboration@duct.org.za"
-                    className="text-lg text-gray-700 hover:text-[#22613C]"
+                    className="text-base text-gray-700 hover:text-[#22613C]"
                   >
                     communications@crosscatchmentcollective.org
                   </a>

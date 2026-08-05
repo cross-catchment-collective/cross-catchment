@@ -3,11 +3,10 @@ import merlImage from "../assets/resources/merl.png";
 import youthImage from "../assets/resources/youth-academy.JPG";
 import researchFramework from "../assets/resources/CCC-Research-Framework-March-2026.pdf"
 import wisdomFramework from "../assets/resources/Catchment_Wisdom_Framework_General_guide_v1.pdf"
-import rolReportV10 from "../assets/resources/AWARD_RoL_CCC_BHNR_Case_study_REPORT_v10.pdf"
-import rolReportV2 from "../assets/resources/AWARD_CCC_RoL_Wisdoms_Case_Study_V2.pdf"
 import { Link } from "react-router-dom";
-import { MoveRight } from "lucide-react";
+import { MoveRight, ExternalLink } from "lucide-react";
 import ImpactReports from "../components/ImpactReports";
+
 
 function ResourcesPage() {
     return (
@@ -53,22 +52,22 @@ function ResourcesPage() {
                     <div className="text-left">
                         {/* Text */}
                         <p className="text-4xl font-bold text-[#22613C]">
-                    Research Framework
+                    Cross Catchment Collective Research
                     </p>
 
                     <p className="mt-6 text-gray-700 max-w-[500px] leading-tight">
-                    The CCC Research Framework helps organise and connect research across catchments so that it responds to real implementation needs. 
-                    It identifies shared research priorities, collates existing knowledge, links researchers with catchment partnerships, and supports evidence-based decision-making. 
-                    <br />
-                    <br />
-                    The aim is to make research practical, accessible and useful for strengthening restoration, governance, finance, MERL and learning across the Collective
+                    The Cross-Catchment Collective’s research programme brings practitioners, researchers and institutions together to address shared challenges across South Africa’s catchments. 
+                    It identifies priority knowledge gaps, connects existing research with practical experience, and supports collaborative studies that can improve catchment planning, 
+                    restoration and governance. By sharing evidence and lessons across regions, the programme helps turn research into practical knowledge that strengthens
+                     decision-making and supports healthier, more resilient catchments.
                     </p>
 
                     <a 
-                    className="inline-block mt-8 bg-[#22613C] text-white px-8 py-3 rounded-lg hover:bg-[#18492C] transition"
+                    className="inline-flex items-center gap-2 mt-3 text-[#22613C] bg-[#fff] border border-[#2E613F] px-8 py-3 rounded-lg hover:bg-[#22613C] hover:text-white hover:border-white transition"
                     href={researchFramework}
                     target="_blank">
                         Learn More
+                        <MoveRight />
                     </a>
 
                     {/* <Link
@@ -83,6 +82,25 @@ function ResourcesPage() {
                 </div>
 
 
+            </div>
+                {/* Research framewwowrk */}
+            <div className="max-w-7xl mx-auto mt-6 px-6">
+                <h2 className="text-3xl font-bold text-[#22613C]">
+                    Research Framework
+                </h2>
+                    
+                <p className="mt-3 text-gray-700 mx-auto max-w-[500px] leading-tight">
+                    The Cross-Catchment Collective Research Framework connects research across catchments with practical implementation needs. It identifies shared priorities, 
+                    brings together existing knowledge, links researchers and catchment partnerships, and supports evidence-based action across restoration, governance, finance, MERL and learning.
+                </p>
+
+                <a 
+                    className="inline-flex items-center mt-3 gap-2 text-[#22613C] bg-[#fff] border border-[#2E613F] px-8 py-3 rounded-lg hover:bg-[#22613C] hover:text-white hover:border-white transition"
+                    href="https://drive.google.com/file/d/1iA0aaQoh4VmPWhYIWoFYrx3TOWcY4tZi/view?usp=drive_link"
+                    target="_blank">
+                        View Document
+                        <ExternalLink />
+                </a>
             </div>
 
         </section>
