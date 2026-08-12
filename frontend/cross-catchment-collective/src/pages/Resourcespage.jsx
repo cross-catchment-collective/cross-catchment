@@ -1,6 +1,7 @@
-import researchImage from "../assets/resources/research-framework.jpg";
+import {motion} from "framer-motion";
+import researchImage from "../assets/resources/research-framework.webp";
 import merlImage from "../assets/resources/merl.png";
-import youthImage from "../assets/resources/youth-academy.JPG";
+import youthImage from "../assets/resources/youth-academy.webp";
 import researchFramework from "../assets/resources/CCC-Research-Framework-March-2026.pdf"
 import wisdomFramework from "../assets/resources/Catchment_Wisdom_Framework_General_guide_v1.pdf"
 import { Link } from "react-router-dom";
@@ -11,7 +12,12 @@ import ImpactReports from "../components/ImpactReports";
 function ResourcesPage() {
     return (
         <>
-            <section className="bg-[#EEF3EF] py-20">
+            <motion.section 
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+            className="bg-[#EEF3EF] py-20">
                 <div className="max-w-4xl mx-auto px-6 text-center">
 
                     <h2 className="text-4xl font-bold text-[#0F4C81]">
@@ -33,9 +39,14 @@ function ResourcesPage() {
                     </p>
 
                 </div>
-            </section>
+            </motion.section>
 
-            <section className="py-15 bg-white">
+            <motion.section 
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.8 }}
+            className="py-15 bg-white">
 
                 <div className="max-w-7xl mx-auto px-6">
 
@@ -51,9 +62,9 @@ function ResourcesPage() {
 
                     <div className="text-left">
                         {/* Text */}
-                        <p className="text-4xl font-bold text-[#22613C]">
+                        <h2 className="text-4xl font-bold text-[#22613C]">
                     Cross Catchment Collective Research
-                    </p>
+                    </h2>
 
                     <p className="mt-6 text-gray-700 max-w-[500px] leading-tight">
                     The Cross-Catchment Collective’s research programme brings practitioners, researchers and institutions together to address shared challenges across South Africa’s catchments. 
@@ -103,9 +114,14 @@ function ResourcesPage() {
                 </a>
             </div>
 
-        </section>
+        </motion.section>
 
-        <section className="bg-[#fff]">
+        <motion.section 
+        initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+        className="bg-[#fff]">
 
             <div className="max-w-6xl mx-auto px-6 pb-10 text-center">
 
@@ -154,9 +170,14 @@ function ResourcesPage() {
 
             </div>
 
-        </section>
+        </motion.section>
 
-        <section className="bg-[#EEF3EF] py-20">
+        <motion.section 
+        initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+        className="bg-[#EEF3EF] py-20">
 
             <div className="max-w-7xl mx-auto px-6">
 
@@ -164,9 +185,9 @@ function ResourcesPage() {
 
                 <div className="md:text-right">
 
-                    <p className="text-4xl font-bold text-[#0F4C81]">
+                    <h2 className="text-4xl font-bold text-[#0F4C81]">
                     Youth Academy
-                    </p>
+                    </h2>
 
                     <p className="mt-6 text-gray-700 leading-tight">
                     The Youth Academy creates meaningful pathways for young people to
@@ -197,7 +218,7 @@ function ResourcesPage() {
 
             </div>
 
-        </section>
+        </motion.section>
         <ImpactReports />
         </>
     )

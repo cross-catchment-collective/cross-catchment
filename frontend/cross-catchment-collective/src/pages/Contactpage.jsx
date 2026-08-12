@@ -1,5 +1,6 @@
 import { Mail, Send } from "lucide-react";
 import { useState } from "react";
+import {motion} from "framer-motion";
 import emailjs from "@emailjs/browser"
 
 function ContactPage() {
@@ -8,6 +9,10 @@ function ContactPage() {
     from_email: '',
     message: ''
   })
+
+const [showPopup, setShowPopup] = useState(false);
+const [popupMessage, setPopupMessage] = useState("");
+const [popupSuccess, setPopupSuccess] = useState(true);
 
 const handleChange = (e) => {
   const {name, value} = e.target;
@@ -23,7 +28,10 @@ const sendEmail = (e) => {
   // console.log('Form submitted: ', formData)
   emailjs.send("service_ypeczl3", "template_v105gkc", formData,"6Bzx4DcI-NfTr-zId")
   .then(() => {
-    alert("Message submitted!");
+    // alert("Message submitted!");
+    setPopupMessage("Your message has been sent successfully!");
+    setPopupSuccess(true);
+    setShowPopup(true);
 
     setFormData({
           from_name: "",
@@ -31,11 +39,24 @@ const sendEmail = (e) => {
           message: "",
         });
   })
-  .catch(err => alert("Message not sent"))
+  .catch((error) => {
+    console.error("Email error:", error);
+
+    setPopupMessage(
+        "Something went wrong. Please try again later."
+      );
+      setPopupSuccess(false);
+      setShowPopup(true);
+  })
 }
 
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <motion.section 
+    initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+    className="bg-white py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -43,9 +64,9 @@ const sendEmail = (e) => {
           {/* Left Side */}
           <div className="text-left">
 
-            <p className="text-4xl font-semibold text-[#22613C]">
+            <h3 className="text-4xl font-semibold text-[#22613C]">
               Get in touch
-            </p>
+            </h3>
 
             {/* <div className="w-24 h-1 bg-[#22613C] mt-6 rounded-full"></div> */}
 
@@ -77,9 +98,9 @@ const sendEmail = (e) => {
 
                   <a
                     href="mailto:catchmentcollaboration@duct.org.za"
-                    className="text-base text-gray-700 hover:text-[#22613C]"
+                    className="text-[0.8em] md:text-base text-gray-700 hover:text-[#22613C]"
                   >
-                    communications@crosscatchmentcollective.org
+                    info@crosscatchmentcollective.org
                   </a>
 
                 </div>
@@ -189,13 +210,78 @@ const sendEmail = (e) => {
               </button>
 
             </form>
+            
+            {showPopup && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+    <div className="w-full max-w-md rounded-2xl bg-white p-8 text-center shadow-2xl">
 
+      {/* Icon */}
+      <div
+        className={`mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full ${
+          popupSuccess
+            ? "bg-green-100 text-[#22613C]"
+            : "bg-red-100 text-red-600"
+        }`}
+      >
+        {popupSuccess ? (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        ) : (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        )}
+      </div>
+
+      {/* Title */}
+      <h2 className="mb-2 text-2xl font-bold text-gray-800">
+        {popupSuccess ? "Message Sent!" : "Message Failed"}
+      </h2>
+
+      {/* Message */}
+      <p className="mb-6 text-gray-600">
+        {popupMessage}
+      </p>
+
+      {/* Close Button */}
+      <button
+        onClick={() => setShowPopup(false)}
+        className="w-full rounded-lg bg-[#22613C] px-6 py-3 font-semibold text-white transition hover:bg-[#18492C]"
+      >
+        Close
+      </button>
+    </div>
+  </div>
+)}
           </div>
 
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
 

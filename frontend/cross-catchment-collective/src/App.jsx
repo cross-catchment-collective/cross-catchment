@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
 import Navbar from './components/Navbar.jsx'
 import Homepage from './pages/Homepage.jsx'
 import Footer from './components/Footer.jsx'

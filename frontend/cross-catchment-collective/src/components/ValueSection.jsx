@@ -1,5 +1,5 @@
 import ValueCard from "./ValueCard";
-
+import {motion} from "framer-motion";
 import stewardship from "../assets/values/stewardship.jpg";
 import resilience from "../assets/values/resilience.jpeg";
 import collaboration from "../assets/values/collaboration.jpg";
@@ -36,7 +36,7 @@ const values = [
     title: "Equity & Inclusion",
     icon: equity,
     description:
-      "We value diversity, fairness and inclusion, ensuring all voices—especially local communities and youth—are heard and respected.",
+      "We value diversity, fairness and inclusion, ensuring all voices-especially local communities and youth-are heard and respected.",
   },
   {
     title: "Advocacy & Influence",
@@ -48,15 +48,20 @@ const values = [
 
 export default function ValuesSection() {
   return (
-    <section className="bg-white py-20 lg:py-28">
+    <motion.section 
+    initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+    className="bg-white py-20 lg:py-28">
 
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
 
-          <p className="text-4xl md:text-5xl font-bold text-[#074C82]">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#074C82]">
             Our Values
-          </p>
+          </h2>
 
         </div>
 
@@ -72,6 +77,6 @@ export default function ValuesSection() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

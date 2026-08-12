@@ -1,12 +1,12 @@
 import PartnershipCard from "./PartnershipCard";
-
-import umgeni from "../assets/partnerships/UEIP.jpg";
+import  {motion} from "framer-motion";
+import umgeni from "../assets/partnerships/UEIP.webp";
 import abi from "../assets/partnerships/abii.png";
 import umzimvubu from "../assets/partnerships/umzibu.jpg";
 import drakensberg from "../assets/partnerships/northern.jpg";
-import umkhomazi from "../assets/partnerships/umkhomazi.jpg";
+import umkhomazi from "../assets/partnerships/umkhomazi.webp";
 import umhlathuze from "../assets/partnerships/umhlathaze.jpg";
-import lowveld from "../assets/partnerships/lowveld.jpg"
+import lowveld from "../assets/partnerships/lowveld.webp"
 
 const partnerships = [
   {
@@ -77,7 +77,12 @@ const partnerships = [
 
 export default function PartnershipsSection() {
   return (
-    <section className="bg-[#FAFAFA] py-24">
+    <motion.section 
+    initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+    className="bg-[#FAFAFA] py-24">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -85,9 +90,9 @@ export default function PartnershipsSection() {
 
         <div className="text-center max-w-3xl mx-auto">
 
-          <p className="text-5xl font-bold text-[#074C82]">
+          <h2 className="text-5xl font-bold text-[#074C82]">
             Our Partnerships
-          </p>
+          </h2>
 
           <p className="mt-5 text-xl text-gray-600">
             Working together for resilient landscapes, thriving communities
@@ -149,6 +154,6 @@ export default function PartnershipsSection() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

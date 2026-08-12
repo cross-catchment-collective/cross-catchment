@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import {motion} from "framer-motion"
 import rolReportV10 from "../assets/resources/AWARD_RoL_CCC_BHNR_Case_study_REPORT_v10.pdf"
 import rolReportV2 from "../assets/resources/AWARD_CCC_RoL_Wisdoms_Case_Study_V2.pdf"
 import report2025 from "../assets/impact_banner.png";
@@ -28,7 +29,12 @@ const reports = [
 
 export default function ImpactReports() {
   return (
-    <section className="bg-white py-20">
+    <motion.section 
+    initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+    className="bg-white py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
         {/* Section Heading */}
@@ -92,6 +98,6 @@ export default function ImpactReports() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
