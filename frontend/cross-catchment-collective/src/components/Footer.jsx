@@ -42,7 +42,7 @@ function Footer() {
               <ul className="space-y-2 text-gray-800">
                 <li>
                   <a
-                    href="/cross-catchment-collective/"
+                    href="/"
                     className="transition hover:text-green-700"
                   >
                     Home
@@ -51,7 +51,7 @@ function Footer() {
 
                 <li>
                   <a
-                    href="/cross-catchment-collective/about-us"
+                    href="/about-us"
                     className="transition hover:text-green-700"
                   >
                     About Us
@@ -60,7 +60,7 @@ function Footer() {
 
                 <li>
                   <a
-                    href="/cross-catchment-collective/resource-hub"
+                    href="/resource-hub"
                     className="transition hover:text-green-700"
                   >
                     Resource Hub
@@ -69,7 +69,7 @@ function Footer() {
 
                 <li>
                   <a
-                    href="/cross-catchment-collective/news"
+                    href="/news"
                     className="transition hover:text-green-700"
                   >
                     News
@@ -78,7 +78,7 @@ function Footer() {
 
                 <li>
                   <a
-                    href="/cross-catchment-collective/contact"
+                    href="/contact"
                     className="transition hover:text-green-700"
                   >
                     Contact
@@ -96,9 +96,9 @@ function Footer() {
               <div className="space-y-3 text-gray-800">
                 <a
                   href="mailto:CatchmentCollaboration@duct.org.za"
-                  className="block hover:text-green-700"
+                  className="text-[0.8em] md:text-base block hover:text-green-700"
                 >
-                  communications@crosscatchmentcollective.org
+                  info@crosscatchmentcollective.org
                 </a>
 
                 <a

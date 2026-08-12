@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
+import {motion} from "framer-motion";
 import heroImage from "../assets/bannerphoto.png";
 import pattern from "../assets/home_banner6.png"; // Optional
 
@@ -7,7 +8,12 @@ function Hero() {
   const navigate = useNavigate();
 
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+
       className="relative overflow-hidden bg-[#EEF3EF]"
       style={{
         backgroundImage: `url(${pattern})`,
@@ -22,11 +28,11 @@ function Hero() {
           {/* Left Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
 
-            <p className="text-2xl md:text-5xl xl:text-4xl font-extrabold text-[#2E613F] pb-1 leading-none">
+            <h1 className="text-2xl md:text-5xl xl:text-4xl font-extrabold text-[#2E613F] pb-1 leading-none">
               Protecting South Africa's
               <br />
               Catchments Together
-            </p>
+            </h1>
 
             <p className="mt-6 max-w-xl text-xl text-[#2E613F] md:text-[#2E613F] leading-tight mx-auto lg:mx-0">
               Restoring water, land and biodiversity through collaboration,
@@ -51,7 +57,7 @@ function Hero() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
 

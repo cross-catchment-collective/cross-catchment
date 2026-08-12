@@ -1,17 +1,23 @@
+import { motion } from "framer-motion";
 import PartnershipsSection from "../components/PartnshipsSection";
 import ValuesSection from "../components/ValueSection";
-import storyMap from "../assets/CCC_Map_updated.jpg.jpeg";
-import team from "../assets/theteam.jpg"
+import storyMap from "../assets/about/CCC_Maps.webp";
+import team from "../assets/about/theteam.jpg"
 
 function AboutPage() {
     return (
         <>
-        <section className="bg-[#7F99B1] py-16 lg:py-20">
+        <motion.section 
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        className="bg-[#7F99B1] py-16 lg:py-20">
             <div className="max-w-5xl mx-auto px-6 text-center">
 
-                <p className="text-3xl lg:text-5xl font-bold text-white">
+                <h2 className="text-3xl lg:text-5xl font-bold text-white">
                 Cross-Catchment Collective
-                </p>
+                </h2>
 
                 <p className="mt-5 text-lg lg:text-2xl text-white/95 max-w-4xl  leading-tight mx-auto">
                 We connect catchment partnerships across South Africa to
@@ -19,15 +25,20 @@ function AboutPage() {
                 </p>
 
             </div>
-        </section>
+        </motion.section>
 
-        <section className="bg-white py-20">
+          <motion.section 
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8 }}
+        className="bg-white py-20">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        <p className="text-3xl lg:text-4xl font-bold text-center text-[#074C82] pb-10 mb-14">
+        <h2 className="text-3xl lg:text-4xl font-bold text-center text-[#074C82] pb-10 mb-8">
           Our Story
-        </p>
+        </h2>
 
         <div className="grid lg:grid-cols-2 gap-14 items-center">
 
@@ -71,10 +82,16 @@ function AboutPage() {
 
       </div>
 
-    </section>
+    </motion.section>
     <PartnershipsSection />
     <ValuesSection />
-    <section className="bg-white">
+    <motion.section 
+    initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+    
+    className="bg-white">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
@@ -84,9 +101,9 @@ function AboutPage() {
             Meet Our Team
           </p>
 
-          <p className="mt-3 text-4xl md:text-5xl font-bold text-[#2D6A4F]">
+          <h3 className="mt-3 text-4xl md:text-5xl font-bold text-[#2D6A4F]">
             The People Behind the Collective
-          </p>
+          </h3>
 
           <p className="mt-4 max-w-2x1 text-gray-600">
             Our team brings together diverse expertise, shared purpose, and a
@@ -116,7 +133,7 @@ function AboutPage() {
 
 
       </div>
-    </section>
+    </motion.section>
     </>
     )
 }

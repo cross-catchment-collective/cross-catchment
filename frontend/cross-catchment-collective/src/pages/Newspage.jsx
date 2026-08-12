@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import {motion} from "framer-motion";
 import drakensbergImg from "../assets/news/drakensberg.jpg";
 import umzimNews from "../assets/news/umzimvubunews.PNG";
 import umzimNews2 from "../assets/news/umzimvuNews.PNG";
@@ -33,10 +33,15 @@ const cards = [
 
 export default function CommunitySection() {
   return (
-    <section className="bg-gray-50 py-20">
+    <motion.section 
+    initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+    className="bg-gray-50 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-1xl font-bold text-[#074C82] sm:text-4xl lg:text-5xl">
+          <h2 className="text-1xl font-bold text-[#074C82] sm:text-3xl lg:text-4xl">
             Cross Catchment Collective Insights
           </h2>
 
@@ -83,6 +88,6 @@ export default function CommunitySection() {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

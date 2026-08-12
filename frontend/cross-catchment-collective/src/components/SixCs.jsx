@@ -6,6 +6,7 @@ import {
   Database,
   HandCoins,
 } from "lucide-react";
+import {motion} from "framer-motion";
 
 const collaborationItems = [
   {
@@ -42,13 +43,18 @@ const collaborationItems = [
 
 function SixCSection() {
   return (
-    <section className="bg-white py-20 px-6 lg:px-10">
+    <motion.section 
+    initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.8 }}
+    className="bg-white py-20 px-6 lg:px-10">
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <div className="text-center mb-16">
-          <p className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#2E613F]">
-            The <span className="">‘Six C’s’</span> of Collaboration
-          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-[#2E613F]">
+            The <span className="">‘Six C’s</span> of Collaboration
+          </h2>
           <p className="mt-3 text-lg md:text-xl text-gray-600">
             that frame what we do
           </p>
@@ -84,7 +90,7 @@ function SixCSection() {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 import uuwasp from "../assets/partner-logos/uwasp.png";
 import abi from "../assets/partner-logos/abi.png";
 import umkhomazi from "../assets/partner-logos/ndc.png";
@@ -21,12 +23,18 @@ function Partners() {
   const navigate = useNavigate();
   
   return (
-    <section className="bg-white py-16 overflow-hidden">
+    <motion.section 
+    initial={{ opacity: 0, y: 60 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.8 }}
+    
+    className="bg-white py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
 
-        <p className="text-4xl font-bold text-center text-[#2E613F] mb-14">
+        <h2 className="text-4xl font-bold text-center text-[#2E613F] mb-14">
           Our Partners
-        </p>
+        </h2>
 
         {/* Fade Effect */}
         <div className="relative mt-8">
@@ -62,7 +70,7 @@ function Partners() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
 
