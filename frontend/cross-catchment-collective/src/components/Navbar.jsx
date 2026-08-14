@@ -28,11 +28,15 @@ function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div onClick={() => navigate("/")} className="flex items-center">
+            <NavLink
+            key={navLinks[0].name}
+            to={navLinks[0].path}>
             <img
               src={logo}
               alt="Cross-Catchment Collective"
               className="h-20 w-auto"
             />
+            </NavLink>
           </div>
 
           {/* Desktop Navigation */}

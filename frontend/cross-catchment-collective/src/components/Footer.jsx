@@ -96,7 +96,7 @@ function Footer() {
               <div className="space-y-3 text-gray-800">
                 <a
                   href="mailto:CatchmentCollaboration@duct.org.za"
-                  className="text-[0.8em] md:text-base block hover:text-green-700"
+                  className="text-[1em] md:text-base block hover:text-green-700"
                 >
                   info@crosscatchmentcollective.org
                 </a>

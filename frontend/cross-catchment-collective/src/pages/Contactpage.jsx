@@ -98,7 +98,7 @@ const sendEmail = (e) => {
 
                   <a
                     href="mailto:catchmentcollaboration@duct.org.za"
-                    className="text-[0.8em] md:text-base text-gray-700 hover:text-[#22613C]"
+                    className="text-[1em] md:text-base text-gray-700 hover:text-[#22613C]"
                   >
                     info@crosscatchmentcollective.org
                   </a>
