@@ -77,12 +77,9 @@ const partnerships = [
 
 export default function PartnershipsSection() {
   return (
-    <motion.section 
-    initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.8 }}
-    className="bg-[#FAFAFA] py-24">
+    <>
+    <section 
+    className="bg-[#FAFAFA] py-15">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -154,6 +151,7 @@ export default function PartnershipsSection() {
         </div>
 
       </div>
-    </motion.section>
+    </section>
+  </>
   );
 }

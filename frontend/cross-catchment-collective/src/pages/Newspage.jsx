@@ -41,7 +41,7 @@ export default function CommunitySection() {
     className="bg-gray-50 py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto mb-10 max-w-3xl text-center">
-          <h2 className="text-1xl font-bold text-[#074C82] sm:text-3xl lg:text-4xl">
+          <h2 className="text-1x1 font-bold text-[#074C82] sm:text-4xl lg:text-4xl">
             Cross Catchment Collective Insights
           </h2>
 

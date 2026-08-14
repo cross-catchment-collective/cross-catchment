@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import Navbar from './components/Navbar.jsx'
 import Homepage from './pages/Homepage.jsx'
 import Footer from './components/Footer.jsx'
@@ -22,6 +23,7 @@ function App() {
   return (
     <>
       <BrowserRouter basename="/">
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Homepage />} />
