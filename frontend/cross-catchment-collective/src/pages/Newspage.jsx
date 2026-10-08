@@ -3,6 +3,7 @@ import {motion} from "framer-motion";
 import drakensbergImg from "../assets/news/drakensberg.jpg";
 import umzimNews from "../assets/news/umzimvubunews.PNG";
 import umzimNews2 from "../assets/news/umzimvuNews.PNG";
+import Subscribe from "../components/Subscribe";
 
 const cards = [
   {
@@ -88,6 +89,7 @@ export default function CommunitySection() {
           ))}
         </div>
       </div>
+      <Subscribe />
     </motion.section>
   );
 }

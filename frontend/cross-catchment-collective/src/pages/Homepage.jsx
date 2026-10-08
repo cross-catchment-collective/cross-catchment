@@ -3,6 +3,7 @@ import Hero from '../components/Hero.jsx'
 import Partners from '../components/Partners.jsx'
 import HowItWorks from '../components/HowItWorks.jsx'
 import SixCSection from '../components/SixCs.jsx'
+import Subscribe from '../components/Subscribe.jsx'
 
 function Homepage () {
     return (
@@ -11,6 +12,7 @@ function Homepage () {
             <Partners />
             <HowItWorks />
             <SixCSection />
+            <Subscribe />
         </>
     )
 }
