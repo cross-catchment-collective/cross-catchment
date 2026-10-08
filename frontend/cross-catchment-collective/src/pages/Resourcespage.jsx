@@ -7,6 +7,7 @@ import wisdomFramework from "../assets/resources/Catchment_Wisdom_Framework_Gene
 import { Link } from "react-router-dom";
 import { MoveRight, ExternalLink } from "lucide-react";
 import ImpactReports from "../components/ImpactReports";
+import Subscribe from "../components/Subscribe";
 
 
 function ResourcesPage() {
@@ -220,6 +221,7 @@ function ResourcesPage() {
 
         </motion.section>
         <ImpactReports />
+        <Subscribe />
         </>
     )
 }

@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import PartnershipsSection from "../components/PartnshipsSection";
 import ValuesSection from "../components/ValueSection";
 import storyMap from "../assets/about/CCC_Maps.webp";
-import team from "../assets/about/theteam.jpg"
+import team from "../assets/about/theteam.jpg";
+import Subscribe from "../components/Subscribe";
 
 function AboutPage() {
     return (
@@ -133,6 +134,8 @@ function AboutPage() {
 
 
       </div>
+
+      <Subscribe />
     </motion.section>
     </>
     )
