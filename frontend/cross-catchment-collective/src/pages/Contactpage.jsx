@@ -4,6 +4,11 @@ import {motion} from "framer-motion";
 import emailjs from "@emailjs/browser"
 
 function ContactPage() {
+
+  const handleClick = () => {
+    window.open("https://mailchi.mp/7a4867b16e58/cross-catchment-collective-mailing-list-subscription", "_blank");
+  };
+
   const [formData, setFormData] = useState({
     from_name: '',
     from_email: '',
@@ -77,7 +82,7 @@ const sendEmail = (e) => {
 
             {/* Contact Info */}
 
-            <div className="mt-14 space-y-8">
+            <div className="mt-4 space-y-8">
 
               <div className="flex items-center gap-6">
 
@@ -135,7 +140,21 @@ const sendEmail = (e) => {
 
                 </div>
 
+                
+
               </div>
+
+              <div className="max-w-2xl mx-auto bg-white">
+                  <p className="text-gray-600 ">
+                    Subscribe for our latest updates and insights
+                  </p>
+
+                  <button
+                      onClick={handleClick}
+                      className="px-6 py-2 mt-2 rounded-md bg-[#215D38] text-white hover:bg-[#18492c] transition">
+                      Subscribe
+                  </button>
+                </div>
 
             </div>
 
@@ -143,7 +162,7 @@ const sendEmail = (e) => {
 
           {/* Contact Form */}
 
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 lg:p-8">
+          <div className="bg-white  p-6 lg:p-8">
 
             <form onSubmit={sendEmail} className="space-y-5">
 
