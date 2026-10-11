@@ -130,7 +130,7 @@ const sendEmail = (e) => {
                   </h3>
 
                   <a
-                    href="https://www.linkedin.com/company/cross-catchment-collective/about/?viewAsMember=true"
+                    href="https://za.linkedin.com/company/cross-catchment-collective?trk=public_post_follow-view-profile"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-lg text-gray-700 hover:text-[#22613C]"

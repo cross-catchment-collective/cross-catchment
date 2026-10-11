@@ -102,7 +102,7 @@ function Footer() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/company/cross-catchment-collective/about/?viewAsMember=true"
+                  href="https://za.linkedin.com/company/cross-catchment-collective?trk=public_post_follow-view-profile"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block hover:text-green-700"
