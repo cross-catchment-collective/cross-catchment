@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 import {motion} from "framer-motion";
-import heroImage from "../assets/bannerphoto.png";
 import pattern from "../assets/home_banner6.png"; // Optional
 
 function Hero() {
